@@ -1,0 +1,99 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 246, 233);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 600px;
+}
+
+.image {
+  flex: 1;
+  width: 50%;
+  text-align: center;
+}
+.text {
+  flex: 1;
+  width: 50%;
+  text-align: center;
+
+  background-color: white;
+}
+.image img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
+#num {
+  font-size: 25px;
+  color: rgba(143, 188, 143, 0.979);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+#num,
+#num2 {
+  display: inline-block;
+}
+#num2 {
+  color: rgba(128, 128, 128, 0.479);
+  position: relative;
+  font-size: 24px;
+  line-height: 1;
+}
+#num2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  font-size: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+h3 {
+  letter-spacing: 1.5px;
+  padding-right: 30px;
+}
+
+/* For screens up to 375px (mobile devices) */
+@media screen and (max-width: 325px) {
+  .container {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* For screens between 376px and 1440px (desktop) */
+@media screen and (min-width: 376px) and (max-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto; /* Center content */
+  }
+}
